@@ -22,14 +22,13 @@ sharedMappings.register(
   tsConfigPath,
   [
     /* mapped paths to share */
-    '@super-prodzekt-nx/shared/data-access-user',
   ],
   workspaceRootPath
 );
 
 module.exports = {
   output: {
-    uniqueName: 'nx-shell',
+    uniqueName: 'account',
     publicPath: 'auto',
   },
   optimization: {
@@ -45,10 +44,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      remotes: {
-        login: 'http://localhost:4301/remoteEntry.js',
-        account: 'http://localhost:4302/remoteEntry.js',
-        handlownia: 'http://localhost:4303/remoteEntry.js',
+      name: 'account',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Module': 'apps/account/src/app/remote-entry/entry.module.ts',
       },
       shared: share({
         '@angular/core': {

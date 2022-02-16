@@ -12,9 +12,19 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot(
       [
         {
+          path: '',
+          loadChildren: () =>
+            import('handlownia/Module').then((m) => m.RemoteEntryModule),
+        },
+        {
           path: 'login',
           loadChildren: () =>
             import('login/Module').then((m) => m.RemoteEntryModule),
+        },
+        {
+          path: 'account',
+          loadChildren: () =>
+            import('account/Module').then((m) => m.RemoteEntryModule),
         },
       ],
       { initialNavigation: 'enabledBlocking' }

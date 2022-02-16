@@ -6,15 +6,15 @@ import {distinctUntilChanged} from "rxjs";
 @Component({
   selector: 'super-prodzekt-nx-root',
   template: `
-    <header>Super header super prodzektu
-      <div *ngIf="isLoggedIn$ | async">User zalogowany</div>
-    </header>
-    <div *ngIf="isLoggedIn$ | async; else signIn">
-      You are authenticated so you can see this content.
-    </div>
-    <ng-template #signIn>
+<!--    <header>Super header super prodzektu-->
+<!--      <div *ngIf="isLoggedIn$ | async">User zalogowany</div>-->
+<!--    </header>-->
+<!--    <div *ngIf="isLoggedIn$ | async; else signIn">-->
+<!--      You are authenticated so you can see this content.-->
+<!--    </div>-->
+<!--    <ng-template #signIn>-->
       <router-outlet></router-outlet>
-    </ng-template>
+<!--    </ng-template>-->
     <footer>Super footer super prodzektu</footer>
   `,
   styles: [`
@@ -42,11 +42,12 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.isLoggedIn$.pipe(distinctUntilChanged())
       .subscribe((loggedIn: boolean) => {
-        if (!loggedIn) {
-          this.router.navigateByUrl('login');
-        } else {
-          this.router.navigateByUrl('');
-        }
+        // loggedIn = true;
+        // if (!loggedIn) {
+        //   this.router.navigateByUrl('');
+        // } else {
+          // this.router.navigateByUrl('account');
+        // }
       })
   }
 }

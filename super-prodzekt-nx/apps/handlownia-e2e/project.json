@@ -1,0 +1,28 @@
+{
+  "root": "apps/handlownia-e2e",
+  "sourceRoot": "apps/handlownia-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/handlownia-e2e/cypress.json",
+        "devServerTarget": "handlownia:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "handlownia:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/handlownia-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["handlownia"]
+}

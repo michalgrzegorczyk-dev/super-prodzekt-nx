@@ -1,6 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "account": "apps/account",
+    "account-e2e": "apps/account-e2e",
+    "handlownia": "apps/handlownia",
+    "handlownia-e2e": "apps/handlownia-e2e",
     "login": "apps/login",
     "login-e2e": "apps/login-e2e",
     "nx-shell": "apps/nx-shell",
