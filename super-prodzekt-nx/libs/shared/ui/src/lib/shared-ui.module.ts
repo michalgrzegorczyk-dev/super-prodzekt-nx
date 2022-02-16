@@ -5,6 +5,10 @@ import {NavbarModule} from "./components/navbar/navbar.module";
 @NgModule({
   imports: [CommonModule, NavbarModule],
   declarations: [],
+  exports: [
+    NavbarModule,
+  ]
+
 })
 export class SharedUiModule {
 }

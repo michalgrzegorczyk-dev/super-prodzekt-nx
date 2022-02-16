@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './main-page.component';
-import {NavbarModule} from "../../../../../../libs/shared/ui/src/lib/components/navbar/navbar.module";
+import {SharedUiModule} from "@super-prodzekt-nx/shared/ui";
+// import {NavbarModule} from "../../../../../../libs/shared/ui/src/lib/components/navbar/navbar.module";
 
 
 
@@ -14,7 +15,7 @@ import {NavbarModule} from "../../../../../../libs/shared/ui/src/lib/components/
   ],
   imports: [
     CommonModule,
-    NavbarModule
+    SharedUiModule
   ]
 })
 export class MainPageModule { }
