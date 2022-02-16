@@ -17,7 +17,8 @@
     "paths": {
       "@super-prodzekt-nx/shared/data-access-user": [
         "libs/shared/data-access-user/src/index.ts"
-      ]
+      ],
+      "@super-prodzekt-nx/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
