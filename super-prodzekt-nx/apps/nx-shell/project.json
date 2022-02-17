@@ -99,7 +99,12 @@
     "serve-mfe": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "commands": ["nx serve login", "nx serve nx-shell"]
+        "commands": [
+          "nx serve handlownia",
+          "nx serve account",
+          "nx serve login",
+          "nx serve nx-shell"
+        ]
       }
     }
   },

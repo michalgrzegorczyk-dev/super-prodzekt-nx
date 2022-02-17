@@ -22,7 +22,7 @@ sharedMappings.register(
   tsConfigPath,
   [
     /* mapped paths to share */
-    '@super-prodzekt-nx/shared/data-access-user'
+    '@super-prodzekt-nx/shared/data-access-user',
   ],
   workspaceRootPath
 );
@@ -47,6 +47,8 @@ module.exports = {
     new ModuleFederationPlugin({
       remotes: {
         login: 'http://localhost:4301/remoteEntry.js',
+        account: 'http://localhost:4302/remoteEntry.js',
+        handlownia: 'http://localhost:4303/remoteEntry.js',
       },
       shared: share({
         '@angular/core': {

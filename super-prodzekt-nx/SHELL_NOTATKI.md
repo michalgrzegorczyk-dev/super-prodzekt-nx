@@ -7,7 +7,7 @@ https://www.npmjs.com/package/@angular-architects/module-federation
 ## Jak używać?
 Dla nx:
 1. Zainstalować bibliotekę `npm install @angular-architects/module-federation`
-2. Należy stworzyć nową apkę, np. shell. Nastęonie użyć komendy `ng g @angular-architects/module-federation:init`
+2. Należy stworzyć nową apkę, np. shell. Następnie użyć komendy `ng g @angular-architects/module-federation:init`
 
 
 ## Komendy użyte do wygenerowania aplikacji mfe
@@ -15,6 +15,10 @@ Dla nx:
 `npx nx g application --name nx-shell --port 4300 --mfe true --mfeType host`
  * Remote - login
 `npx nx g application --name login --port 4301 --mfe true --mfeType remote --routing true --host nx-shell`
+ * Remote - account
+`npx nx g application --name account --port 4302 --mfe true --mfeType remote --routing true --host nx-shell`
+* Remote - handlownia
+`npx nx g application --name handlownia --port 4303 --mfe true --mfeType remote --routing true --host nx-shell`
  * Shared - user service
 `npx nx g @nrwl/angular:lib shared/data-access-user`
 `npx nx g @nrwl/angular:service user --project=shared-data-access-user`
