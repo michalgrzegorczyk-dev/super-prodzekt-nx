@@ -48,7 +48,7 @@ describe('NavbarComponent - better', () => {
   // Generalnie chodzi o to zeby testowac z poziomu uzytkownika a nie wnikac w szczegoly implementacji.
   // W tym wypadku sprawdzam czy widze dostepne 4 opcje ale mnie nie obchodzi czy to jest link czy button
   // W przyszlosci mozna sprawdzac czy mnie przenosi do odpowiedniej strony po kliknieciu
-  it('should display all option on navigation bar', () =>{
+  it('should display all option on navigation bar', () => {
     const { getByText } = component;
     const expectedOptions = ['Strona głowna', 'Wszystkie ogloszenia', 'Rejestracja', 'Logowanko'];
     expectedOptions.forEach(option => {

@@ -1,0 +1,7 @@
+<div class="products">
+  <super-prodzekt-nx-product-details
+    *ngFor="let product of productsToDisplay$ | async"
+    [product]="product"
+    (productClicked)="onProductClicked()">
+  </super-prodzekt-nx-product-details>
+</div>

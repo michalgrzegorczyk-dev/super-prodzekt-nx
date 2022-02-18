@@ -1,21 +1,27 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MainPageComponent } from './main-page.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {MainPageComponent} from './main-page.component';
 import {SharedUiModule} from "@super-prodzekt-nx/shared/ui";
-// import {NavbarModule} from "../../../../../../libs/shared/ui/src/lib/components/navbar/navbar.module";
-
-
+import {
+  SearchModule
+} from "../../../../../../libs/handlownia/feature/feature-search/src/lib/components/search/search.module";
+import {
+  DisplayerModule
+} from "../../../../../../libs/handlownia/feature/feature-product-displayer/src/lib/components/displayer/displayer.module";
 
 @NgModule({
-  declarations: [
-    MainPageComponent
-  ],
-  exports: [
-    MainPageComponent
-  ],
   imports: [
     CommonModule,
-    SharedUiModule
-  ]
+    SharedUiModule,
+    SearchModule,
+    DisplayerModule,
+  ],
+  declarations: [
+    MainPageComponent,
+  ],
+  exports: [
+    MainPageComponent,
+  ],
 })
-export class MainPageModule { }
+export class MainPageModule {
+}

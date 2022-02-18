@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@super-prodzekt-nx/handlownia/feature/feature-product-displayer": [
+        "libs/handlownia/feature/feature-product-displayer/src/index.ts"
+      ],
+      "@super-prodzekt-nx/handlownia/feature-search": [
+        "libs/handlownia/feature/feature-search/src/index.ts"
+      ],
       "@super-prodzekt-nx/shared/data-access-user": [
         "libs/shared/data-access-user/src/index.ts"
       ],

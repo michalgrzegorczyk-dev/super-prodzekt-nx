@@ -1,0 +1,9 @@
+<div data-testid="card" class="card" (click)="openProductDetails()">
+  <p>{{product.header}}</p>
+  <p>{{product.description}}</p>
+  <img height="60" width="60" [src]="product.imageUrl" loading="lazy" [alt]="product.description"/>
+</div>
+
+<span data-testid="count">Current Count: {{ xd }}</span>
+<button (click)="openProductDetails()">+</button>
+<button data-testid="button" type="submit" disabled>submit</button>

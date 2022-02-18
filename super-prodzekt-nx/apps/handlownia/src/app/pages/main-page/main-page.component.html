@@ -1,2 +1,27 @@
 <super-prodzekt-nx-navbar></super-prodzekt-nx-navbar>
-<img src="https://www.restauracje-jedzenie-online.pl/img/logo_tcom/zahir-kebab-warszawa-warszawa.png">
+<div class="container">
+  <super-prodzekt-nx-typical-super-card title="wyszukaj z 10 produktow">
+    <super-prodzekt-nx-search searchTextHeader="Wyszkukaj swój super produkt:"></super-prodzekt-nx-search>
+  </super-prodzekt-nx-typical-super-card>
+</div>
+
+<div class="container">
+  <super-prodzekt-nx-typical-super-card title="promowane produkty">
+    <super-prodzekt-nx-displayer [displayType]="DisplayType.PROMOTED"></super-prodzekt-nx-displayer>
+  </super-prodzekt-nx-typical-super-card>
+</div>
+
+<div class="container" style="background-color: white; height: 100px">
+  tu będzie migoczący bannerek
+</div>
+
+
+<div class="container">
+  <super-prodzekt-nx-typical-super-card title="wszystkie produkty">
+    <super-prodzekt-nx-displayer  [displayType]="DisplayType.ALL"></super-prodzekt-nx-displayer>
+  </super-prodzekt-nx-typical-super-card>
+</div>
+
+<button>Zobacz wszystkie</button>
+
+

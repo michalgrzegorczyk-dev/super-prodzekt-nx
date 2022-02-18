@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/handlownia/feature/feature-search",
+  "sourceRoot": "libs/handlownia/feature/feature-search/src",
+  "prefix": "super-prodzekt-nx",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/handlownia/feature/feature-search"],
+      "options": {
+        "jestConfig": "libs/handlownia/feature/feature-search/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/handlownia/feature/feature-search/src/**/*.ts",
+          "libs/handlownia/feature/feature-search/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
