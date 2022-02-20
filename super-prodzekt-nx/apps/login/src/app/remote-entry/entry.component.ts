@@ -1,24 +1,23 @@
-import {Component} from '@angular/core';
-import {UserService} from "@super-prodzekt-nx/shared/data-access-user";
+import { AuthFacade } from './../../../../../libs/shared/data-access-user/src/lib/state/auth.facade';
+import { Component } from '@angular/core';
+import { UserService } from '@super-prodzekt-nx/shared/data-access-user';
 
 @Component({
   selector: 'super-prodzekt-nx-login-entry',
-  template:
-    `
-      <div class="login-app">
-        <form class="login-form" (ngSubmit)="login()">
-          <label>
-            Username:
-            <input type="text" name="username" [(ngModel)]="username"/>
-          </label>
-          <label>
-            Password:
-            <input type="password" name="password" [(ngModel)]="password"/>
-          </label>
-          <button type="submit">Login</button>
-        </form>
-        <div *ngIf="isLoggedIn$ | async">User is logged in!</div>
-      </div>`,
+  template: ` <div class="login-app">
+    <form class="login-form" (ngSubmit)="login()">
+      <label>
+        Username:
+        <input type="text" name="username" [(ngModel)]="username" />
+      </label>
+      <label>
+        Password:
+        <input type="password" name="password" [(ngModel)]="password" />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <div *ngIf="isLoggedIn$ | async">User is logged in!</div>
+  </div>`,
   styles: [
     `
       .login-app {
@@ -46,10 +45,12 @@ export class RemoteEntryComponent {
 
   isLoggedIn$ = this.userService.isUserLoggedIn$;
 
-  constructor(private userService: UserService) {
-  }
+  constructor(
+    private userService: UserService,
+    private readonly authFacade: AuthFacade
+  ) {}
 
   login() {
-    this.userService.checkCredentials(this.username, this.password);
+    this.authFacade.checkCredentials(this.username, this.password);
   }
 }

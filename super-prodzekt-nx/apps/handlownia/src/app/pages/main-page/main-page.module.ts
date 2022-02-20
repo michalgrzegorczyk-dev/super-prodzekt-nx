@@ -8,6 +8,9 @@ import {
 import {
   DisplayerModule
 } from "../../../../../../libs/handlownia/feature/feature-product-displayer/src/lib/components/displayer/displayer.module";
+import {
+  TypicalSuperCardModule
+} from "../../../../../../libs/shared/ui/src/lib/components/typical-super-card/typical-super-card.module";
 
 @NgModule({
   imports: [
@@ -15,6 +18,7 @@ import {
     SharedUiModule,
     SearchModule,
     DisplayerModule,
+    TypicalSuperCardModule,
   ],
   declarations: [
     MainPageComponent,

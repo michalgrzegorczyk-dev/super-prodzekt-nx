@@ -5,6 +5,12 @@
   </div>
   <div>
     <a href="">Rejestracja</a>
-    <a href="">Logowanko</a>
+    <ng-container *ngIf="isUserLogged$ | async; else login">
+      <button (click)="onLogout()">Wylogowanko</button>
+    </ng-container>
+    
+    <ng-template #login>
+      <a href="login">Logowanko</a>
+    </ng-template>
   </div>
 </nav>
