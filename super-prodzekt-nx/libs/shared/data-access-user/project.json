@@ -3,7 +3,6 @@
   "root": "libs/shared/data-access-user",
   "sourceRoot": "libs/shared/data-access-user/src",
   "prefix": "super-prodzekt-nx",
-  "architect": {},
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",

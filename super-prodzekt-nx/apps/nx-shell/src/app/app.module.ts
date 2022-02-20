@@ -32,6 +32,11 @@ import { SharedDataAccessUserModule } from '@super-prodzekt-nx/shared/data-acces
           loadChildren: () =>
             import('account/Module').then((m) => m.RemoteEntryModule),
         },
+        {
+          path: 'documentation',
+          loadChildren: () =>
+            import('documentation/Module').then((m) => m.RemoteEntryModule),
+        },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),

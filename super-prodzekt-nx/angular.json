@@ -3,6 +3,8 @@
   "projects": {
     "account": "apps/account",
     "account-e2e": "apps/account-e2e",
+    "documentation": "apps/documentation",
+    "documentation-e2e": "apps/documentation-e2e",
     "handlownia": "apps/handlownia",
     "handlownia-e2e": "apps/handlownia-e2e",
     "handlownia-feature-product-displayer": "libs/handlownia/feature/feature-product-displayer",
