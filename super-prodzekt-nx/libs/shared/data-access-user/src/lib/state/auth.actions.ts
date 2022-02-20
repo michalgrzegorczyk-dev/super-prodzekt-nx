@@ -1,14 +1,17 @@
+import { User } from './../model/user';
 import { createAction, props } from '@ngrx/store';
-import { AuthEntity } from './auth.models';
+import { UserCredential } from '../model/user';
 
-export const init = createAction('[Auth Page] Init');
-
-export const loadAuthSuccess = createAction(
-  '[Auth/API] Load Auth Success',
-  props<{ auth: AuthEntity[] }>()
+export const checkCredentials = createAction(
+  '[Auth] Check credentails',
+  props<{ credentials: UserCredential }>()
 );
 
-export const loadAuthFailure = createAction(
-  '[Auth/API] Load Auth Failure',
-  props<{ error: any }>()
+export const loginSuccess = createAction(
+  '[Auth] Login Success',
+  props<{ user: User }>()
 );
+
+export const loginFailure = createAction('[Auth] Login Failure');
+
+export const logoutUser = createAction('[Auth] Logout User');

@@ -22,6 +22,7 @@ sharedMappings.register(
   tsConfigPath,
   [
     /* mapped paths to share */
+    '@super-prodzekt-nx/shared/data-access-user',
   ],
   workspaceRootPath
 );

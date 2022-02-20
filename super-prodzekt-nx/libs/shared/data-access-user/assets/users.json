@@ -1,0 +1,62 @@
+[
+  {
+    "id": "621110d8de4d7cd0ad490dab",
+    "avatar": "http://placehold.it/32x32",
+    "name": "Mack Alexander",
+    "gender": "male",
+    "company": "TELLIFLY",
+    "email": "test@test.com",
+    "password": "test",
+    "address": "407 Dumont Avenue, Golconda, Oregon, 2123"
+  },
+  {
+    "id": "621110d802fb29808beddd75",
+    "avatar": "http://placehold.it/32x32",
+    "name": "Katy Carlson",
+    "gender": "female",
+    "company": "PLASMOX",
+    "email": "katycarlson@plasmox.com",
+    "password": "test",
+    "address": "604 Porter Avenue, Tyro, Marshall Islands, 3457"
+  },
+  {
+    "id": "621110d881e15b3fb382fac9",
+    "avatar": "http://placehold.it/32x32",
+    "name": "Farmer Webb",
+    "gender": "male",
+    "company": "MAGNINA",
+    "email": "farmerwebb@magnina.com",
+    "password": "test",
+    "address": "431 Bridgewater Street, Alfarata, Palau, 4203"
+  },
+  {
+    "id": "621110d8a686b73f01bc579c",
+    "avatar": "http://placehold.it/32x32",
+    "name": "Trudy Wilkerson",
+    "gender": "female",
+    "company": "MENBRAIN",
+    "email": "trudywilkerson@menbrain.com",
+    "password": "test",
+    "address": "292 Debevoise Street, Rushford, Federated States Of Micronesia, 2053"
+  },
+  {
+    "id": "621110d80983c6d21c2aaf46",
+    "avatar": "http://placehold.it/32x32",
+    "name": "Tasha Cooke",
+    "gender": "female",
+    "company": "ZILCH",
+    "email": "tashacooke@zilch.com",
+    "password": "test",
+    "address": "488 Elm Place, Gila, Puerto Rico, 5014"
+  },
+  {
+    "id": "621110d85484f8153adbf876",
+    "avatar": "http://placehold.it/32x32",
+    "name": "Regina Foreman",
+    "gender": "female",
+    "company": "PHEAST",
+    "email": "reginaforeman@pheast.com",
+    "password": "test",
+    "address": "857 Pilling Street, Sabillasville, Massachusetts, 4915"
+  }
+]

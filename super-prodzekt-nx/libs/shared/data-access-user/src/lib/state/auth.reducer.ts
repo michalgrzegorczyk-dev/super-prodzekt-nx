@@ -1,36 +1,37 @@
-import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
+import { User } from './../model/user';
 import { createReducer, on, Action } from '@ngrx/store';
 
 import * as AuthActions from './auth.actions';
-import { AuthEntity } from './auth.models';
 
 export const AUTH_FEATURE_KEY = 'auth';
 
-export interface State extends EntityState<AuthEntity> {
-  selectedId?: string | number; // which Auth record has been selected
-  loaded: boolean; // has the Auth list been loaded
-  error?: string | null; // last known error (if any)
+export interface State {
+  loggedUser?: User; // which Auth record has been selected
+  isLoginFailed: boolean;
 }
 
 export interface AuthPartialState {
   readonly [AUTH_FEATURE_KEY]: State;
 }
 
-export const authAdapter: EntityAdapter<AuthEntity> =
-  createEntityAdapter<AuthEntity>();
-
-export const initialState: State = authAdapter.getInitialState({
-  // set initial required properties
-  loaded: false,
-});
+export const initialState: State = {
+  loggedUser: undefined,
+  isLoginFailed: false,
+};
 
 const authReducer = createReducer(
   initialState,
-  on(AuthActions.init, (state) => ({ ...state, loaded: false, error: null })),
-  on(AuthActions.loadAuthSuccess, (state, { auth }) =>
-    authAdapter.setAll(auth, { ...state, loaded: true })
-  ),
-  on(AuthActions.loadAuthFailure, (state, { error }) => ({ ...state, error }))
+  on(AuthActions.loginSuccess, (state, { user }) => ({
+    ...state,
+    loggedUser: user,
+    isLoginFailed: false,
+  })),
+  on(AuthActions.loginFailure, (state) => ({ ...state, isLoginFailed: true })),
+  on(AuthActions.logoutUser, (state) => ({
+    ...state,
+    user: undefined,
+    isLoginFailed: false,
+  }))
 );
 
 export function reducer(state: State | undefined, action: Action) {
