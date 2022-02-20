@@ -17,12 +17,9 @@ export class ProductDetailsComponent {
     isPromoted: false,
   };
 
-  xd = 1
   @Output() productClicked = new EventEmitter<void>();
 
   openProductDetails() {
-    console.log('xerer')
-    this.xd ++;
     this.productClicked.emit();
   }
 }

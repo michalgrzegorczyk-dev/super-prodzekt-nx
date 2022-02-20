@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {DisplayType} from "../../enums/display-type";
 import {Product} from "../../models/product";
 import {ProductsService} from "../../services/products.service";
@@ -8,7 +8,6 @@ import {Observable} from "rxjs";
   selector: 'super-prodzekt-nx-displayer',
   templateUrl: './displayer.component.html',
   styleUrls: ['./displayer.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DisplayerComponent {
 
@@ -18,9 +17,8 @@ export class DisplayerComponent {
     this.productsToDisplay$ = this._productService.getProducts(displayType)
   }
 
-  constructor(private readonly _productService: ProductsService) {
+  constructor(readonly _productService: ProductsService) {
   }
-
 
   onProductClicked() {
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {
   DisplayType
 } from "../../../../../../libs/handlownia/feature/feature-product-displayer/src/lib/enums/display-type";
@@ -8,12 +8,6 @@ import {
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent {
   DisplayType = DisplayType;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

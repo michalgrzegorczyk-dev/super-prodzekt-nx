@@ -1,25 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { TypicalSuperCardComponent } from './typical-super-card.component';
+import {TypicalSuperCardComponent} from './typical-super-card.component';
+import {getByText, render, RenderResult} from "@testing-library/angular";
 
 describe('TypicalSuperCardComponent', () => {
-  let component: TypicalSuperCardComponent;
-  let fixture: ComponentFixture<TypicalSuperCardComponent>;
+  let component: RenderResult<TypicalSuperCardComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ TypicalSuperCardComponent ]
+    component = await render(TypicalSuperCardComponent, {
+      componentProperties: {
+        title: 'dziadek w lesie',
+      }
     })
-    .compileComponents();
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TypicalSuperCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should display header from input', () => {
+    const { getByText } = component;
+    expect(getByText('dziadek w lesie')).toBeInTheDocument()
   });
 });

@@ -1,18 +1,17 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {TypicalSuperCardComponent} from "./typical-super-card.component";
-
-
 
 @NgModule({
   declarations: [
-    TypicalSuperCardComponent
+    TypicalSuperCardComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
-    TypicalSuperCardComponent
+    TypicalSuperCardComponent,
   ]
 })
-export class TypicalSuperCardModule { }
+export class TypicalSuperCardModule {
+}
