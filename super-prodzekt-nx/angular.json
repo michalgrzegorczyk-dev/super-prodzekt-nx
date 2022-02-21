@@ -14,6 +14,8 @@
     "nx-shell": "apps/nx-shell",
     "nx-shell-e2e": "apps/nx-shell-e2e",
     "shared-data-access-user": "libs/shared/data-access-user",
-    "shared-ui": "libs/shared/ui"
+    "shared-ui": "libs/shared/ui",
+    "user-details": "apps/user-details",
+    "user-details-e2e": "apps/user-details-e2e"
   }
 }

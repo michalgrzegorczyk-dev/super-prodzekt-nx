@@ -1,24 +1,27 @@
 {
   "projectType": "application",
-  "root": "apps/nx-shell",
-  "sourceRoot": "apps/nx-shell/src",
+  "root": "apps/user-details",
+  "sourceRoot": "apps/user-details/src",
   "prefix": "super-prodzekt-nx",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/nx-shell",
-        "index": "apps/nx-shell/src/index.html",
-        "main": "apps/nx-shell/src/main.ts",
-        "polyfills": "apps/nx-shell/src/polyfills.ts",
-        "tsConfig": "apps/nx-shell/tsconfig.app.json",
+        "outputPath": "dist/apps/user-details",
+        "index": "apps/user-details/src/index.html",
+        "main": "apps/user-details/src/main.ts",
+        "polyfills": "apps/user-details/src/polyfills.ts",
+        "tsConfig": "apps/user-details/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/nx-shell/src/favicon.ico", "apps/nx-shell/src/assets"],
-        "styles": ["apps/nx-shell/src/styles.scss"],
+        "assets": [
+          "apps/user-details/src/favicon.ico",
+          "apps/user-details/src/assets"
+        ],
+        "styles": ["apps/user-details/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/nx-shell/webpack.config.js"
+          "path": "apps/user-details/webpack.config.js"
         }
       },
       "configurations": {
@@ -37,13 +40,13 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/nx-shell/src/environments/environment.ts",
-              "with": "apps/nx-shell/src/environments/environment.prod.ts"
+              "replace": "apps/user-details/src/environments/environment.ts",
+              "with": "apps/user-details/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/nx-shell/webpack.prod.config.js"
+            "path": "apps/user-details/webpack.prod.config.js"
           }
         },
         "development": {
@@ -61,52 +64,39 @@
       "executor": "@nrwl/angular:webpack-server",
       "configurations": {
         "production": {
-          "browserTarget": "nx-shell:build:production"
+          "browserTarget": "user-details:build:production"
         },
         "development": {
-          "browserTarget": "nx-shell:build:development"
+          "browserTarget": "user-details:build:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 4300,
-        "publicHost": "http://localhost:4300"
+        "port": 4305,
+        "publicHost": "http://localhost:4305"
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "nx-shell:build"
+        "browserTarget": "user-details:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/nx-shell/src/**/*.ts",
-          "apps/nx-shell/src/**/*.html"
+          "apps/user-details/src/**/*.ts",
+          "apps/user-details/src/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/nx-shell"],
+      "outputs": ["coverage/apps/user-details"],
       "options": {
-        "jestConfig": "apps/nx-shell/jest.config.js",
+        "jestConfig": "apps/user-details/jest.config.js",
         "passWithNoTests": true
-      }
-    },
-    "serve-mfe": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "commands": [
-          "nx serve user-details",
-          "nx serve documentation",
-          "nx serve handlownia",
-          "nx serve account",
-          "nx serve login",
-          "nx serve nx-shell"
-        ]
       }
     }
   },
