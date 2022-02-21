@@ -50,7 +50,7 @@ module.exports = {
         account: 'http://localhost:4302/remoteEntry.js',
         handlownia: 'http://localhost:4303/remoteEntry.js',
         documentation: 'http://localhost:4304/remoteEntry.js',
-        user-details: 'http://localhost:4305/remoteEntry.js',
+        'user-details': 'http://localhost:4305/remoteEntry.js',
       },
       shared: share({
         '@angular/core': {
