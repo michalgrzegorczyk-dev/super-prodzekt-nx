@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { RemoteEntryComponent } from './entry.component';
 import {MainPageModule} from "../pages/main-page/main-page.module";
+import {ProductDetailsComponent} from "../pages/product-details/product-details.component";
 
 @NgModule({
   declarations: [RemoteEntryComponent],
@@ -13,6 +14,10 @@ import {MainPageModule} from "../pages/main-page/main-page.module";
       {
         path: '',
         component: RemoteEntryComponent,
+      },
+      {
+        path: 'details/:id',
+        component: ProductDetailsComponent,
       },
     ]),
     MainPageModule,

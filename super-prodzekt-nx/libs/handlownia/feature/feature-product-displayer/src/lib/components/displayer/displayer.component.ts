@@ -3,6 +3,7 @@ import {DisplayType} from "../../enums/display-type";
 import {Product} from "../../models/product";
 import {ProductsService} from "../../services/products.service";
 import {Observable} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'super-prodzekt-nx-displayer',
@@ -17,9 +18,10 @@ export class DisplayerComponent {
     this.productsToDisplay$ = this._productService.getProducts(displayType)
   }
 
-  constructor(readonly _productService: ProductsService) {
+  constructor(readonly _productService: ProductsService, readonly _router: Router) {
   }
 
-  onProductClicked() {
+  onProductClicked(id: number) {
+    this._router.navigate(['/details/2'])
   }
 }

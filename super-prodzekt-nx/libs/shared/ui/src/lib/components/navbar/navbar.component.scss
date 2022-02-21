@@ -4,13 +4,23 @@ nav {
   background-color: red;
   padding: 20px;
 
-  div {
-    a {
-      background-color: white;
-      padding: 10px;
+  a {
+    background-color: white;
+    padding: 10px;
+  }
 
-      &:first-child {
-        margin-right: 20px;
+  .menu {
+    a {
+      margin-right: 20px;
+    }
+  }
+
+  .login-navigation {
+    a {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

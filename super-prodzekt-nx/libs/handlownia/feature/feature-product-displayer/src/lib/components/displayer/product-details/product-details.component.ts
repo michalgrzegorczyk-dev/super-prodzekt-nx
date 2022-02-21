@@ -17,9 +17,9 @@ export class ProductDetailsComponent {
     isPromoted: false,
   };
 
-  @Output() productClicked = new EventEmitter<void>();
+  @Output() productClicked = new EventEmitter<number>();
 
-  openProductDetails() {
-    this.productClicked.emit();
+  openProductDetails(id: number) {
+    this.productClicked.emit(id);
   }
 }

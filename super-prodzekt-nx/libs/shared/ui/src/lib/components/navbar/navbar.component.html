@@ -1,15 +1,14 @@
 <nav>
-  <div>
+  <div class="menu">
     <a href="">Strona głowna</a>
     <a href="">Wszystkie ogloszenia</a>
     <a href="documentation">Documentation</a>
   </div>
-  <div>
+  <div class="login-navigation">
     <a href="">Rejestracja</a>
     <ng-container *ngIf="isUserLogged$ | async; else login">
       <button (click)="onLogout()">Wylogowanko</button>
     </ng-container>
-
     <ng-template #login>
       <a href="login">Logowanko</a>
     </ng-template>
