@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import { SharedDataAccessUserModule } from '@super-prodzekt-nx/shared/data-access-user';
+import {NavbarModule} from "../../../../libs/shared/ui/src/lib/components/navbar/navbar.module";
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -38,10 +39,16 @@ import { SharedDataAccessUserModule } from '@super-prodzekt-nx/shared/data-acces
             import('documentation/Module').then((m) => m.RemoteEntryModule),
         },
       ],
-      { initialNavigation: 'enabledBlocking' }
+      {
+        initialNavigation: 'enabledBlocking',
+        scrollPositionRestoration: 'top'
+      }
     ),
+    NavbarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent,
+  ],
 })
 export class AppModule {}

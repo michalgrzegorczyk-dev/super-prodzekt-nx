@@ -11,14 +11,17 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
 import {MainPageModule} from "./pages/main-page/main-page.module";
-import {ProductDetailsModule} from "./pages/product-details/product-details.module";
+import {ProductDetailsModule} from "./pages/product-details-wrapper/product-details/product-details.module";
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
     imports: [
       ProductDetailsModule,
         BrowserModule,
-        RouterModule.forRoot([], {initialNavigation: 'enabledBlocking'}),
+        RouterModule.forRoot([], {
+          initialNavigation: 'enabledBlocking',
+          scrollPositionRestoration: 'top'
+        }),
         MainPageModule,
     ],
   providers: [],

@@ -13,6 +13,7 @@ import {distinctUntilChanged} from "rxjs";
 <!--      You are authenticated so you can see this content.-->
 <!--    </div>-->
 <!--    <ng-template #signIn>-->
+<super-prodzekt-nx-navbar></super-prodzekt-nx-navbar>
       <router-outlet></router-outlet>
 <!--    </ng-template>-->
     <footer>Super footer super prodzektu</footer>

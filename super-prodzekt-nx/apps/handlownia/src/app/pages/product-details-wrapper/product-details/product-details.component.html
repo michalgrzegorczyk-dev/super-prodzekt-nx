@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Oto produkt na sprzedaz:</h3>
+
+  <ng-container *ngIf="product$ | async; let product">
+    <p>Id:{{product.id}}</p>
+    <p>Nazwa:{{product.header}}</p>
+    <p>Opis:{{product.description}}</p>
+    <p>img:{{product.imageUrl}}</p>
+  </ng-container>
+  <a routerLink="#">kup ten przedmiot</a><br>
+  <a routerLink="/">wroc na glowna</a>
+</div>

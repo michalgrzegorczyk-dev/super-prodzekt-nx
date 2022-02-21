@@ -5,12 +5,10 @@ import {SharedUiModule} from "@super-prodzekt-nx/shared/ui";
 import {
   SearchModule
 } from "../../../../../../libs/handlownia/feature/feature-search/src/lib/components/search/search.module";
-import {
-  DisplayerModule
-} from "../../../../../../libs/handlownia/feature/feature-product-displayer/src/lib/components/displayer/displayer.module";
+import { DisplayerModule } from "@super-prodzekt-nx/handlownia/feature/feature-product-displayer";
 import {
   TypicalSuperCardModule
-} from "../../../../../../libs/shared/ui/src/lib/components/typical-super-card/typical-super-card.module";
+} from "@super-prodzekt-nx/shared/ui";
 
 @NgModule({
   imports: [
