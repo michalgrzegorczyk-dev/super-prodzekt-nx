@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {DisplayType} from "../enums/display-type";
-import {Observable, of} from "rxjs";
+import {catchError, filter, find, map, Observable, of, throwIfEmpty} from "rxjs";
 import {Product} from "../models/product";
 
 @Injectable({
@@ -11,9 +11,27 @@ export class ProductsService {
   getProducts(type: DisplayType): Observable<Product[]> {
     return of(getData(type));
   }
+
+
+  // todo error handling http
+  getProductById(id: number): Observable<Product | undefined> {
+    return of(getData(DisplayType.ALL)).pipe(map(data => {
+
+      for (let val of data) {
+        console.log(val.id + 'z ' + id + 'z')
+        if (val.id === id) {
+          console.log('jest');
+        } else {
+          console.log('nie ma')
+        }
+      }
+
+      return data[0]
+    }));
+  }
 }
 
-// backend xD
+// todo zrobic backend
 export function getData(type: DisplayType): Product[] {
   if (type === DisplayType.PROMOTED) {
     return dataAll.filter(product => product.isPromoted);

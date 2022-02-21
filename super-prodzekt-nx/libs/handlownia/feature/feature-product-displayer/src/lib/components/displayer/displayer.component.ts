@@ -22,6 +22,6 @@ export class DisplayerComponent {
   }
 
   onProductClicked(id: number) {
-    this._router.navigate(['/details/2'])
+    this._router.navigate([`/details/${id}`])
   }
 }

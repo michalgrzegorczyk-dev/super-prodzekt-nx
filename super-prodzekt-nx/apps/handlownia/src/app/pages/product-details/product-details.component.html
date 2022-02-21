@@ -1,1 +1,10 @@
-<p>product-details works!</p>
+<h3>Oto Twój produkt:</h3>
+
+{{product$ | async  }}
+
+<ng-container *ngIf="product$ | async; let product">
+<p>Id:{{product.id}}</p>
+<p>Nazwa:{{product.header}}</p>
+<p>Opis:{{product.description}}</p>
+<p>img:{{product.imageUrl}}</p>
+</ng-container>
